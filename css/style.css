@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+}
+
+/*Main circle container just to set radial gradient background under clock face*/
+section {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 100px auto 50px auto;
+    border-radius: 50%;
+    background: radial-gradient(#6d98ec, lightblue);
+}
+
+/*Secondary container with clock face image as a bg*/
+figure {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: url('../img/bg2.png') no-repeat center center;
+    background-size: 100% 100%;
+}
+
+/*Watch hand for seconds*/
+hr#seconds {
+    position: absolute;
+    width: calc(50% - 10px);
+    border: 1px solid red;
+    border-radius: 1px;
+    /*-webkit-transform: rotate(-90deg);*/
+    /*-moz-transform: rotate(-90deg);*/
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    top: 50%;
+    z-index: 2;
+    margin: 0;
+    animation: seconds-run linear 60s infinite;
+    -webkit-animation: seconds-run linear 60s infinite;
+    -moz-animation: seconds-run linear 60s infinite;
+    /*box-shadow: 3px 3px 1px #555;*/
+}
+
+/*This keyframes rule will be changed by script on page load*/
+@keyframes seconds-run {
+    from {
+        /*transform: rotate(-90deg);*/
+    }
+    to {
+        /*transform: rotate(270deg);*/
+    }
+}
+
+@-webkit-keyframes seconds-run {
+    from {
+        /*-webkit-transform: rotate(-90deg);*/
+    }
+    to {
+        /*-webkit-transform: rotate(270deg);*/
+    }
+}
+
+@-moz-keyframes seconds-run {
+     from {
+         -webkit-transform: rotate(-90deg);
+         -moz-transform: rotate(-90deg);
+     }
+     to {
+         -webkit-transform: rotate(270deg);
+         -moz-transform: rotate(270deg);
+     }
+ }
+
+hr#minutes {
+    position: absolute;
+    width: calc(45% - 10px);
+    border: 1px solid black;
+    border-radius: 1px;
+    /*-webkit-transform: rotate(-90deg);*/
+    /*-moz-transform: rotate(-90deg);*/
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    top: 50%;
+    z-index: 1;
+    margin: 0;
+    animation: minutes-run linear 3600s infinite;
+    -webkit-animation: minutes-run linear 3600s infinite;
+    -moz-animation: minutes-run linear 3600s infinite;
+    /*box-shadow: 3px 3px 1px #555;*/
+}
+
+@keyframes minutes-run {
+    from {
+        transform: rotate(-90deg);
+    }
+    to {
+        transform: rotate(270deg);
+    }
+}
+
+@-webkit-keyframes minutes-run {
+    from {
+        -webkit-transform: rotate(-90deg);
+    }
+    to {
+        -webkit-transform: rotate(270deg);
+    }
+}
+
+@-moz-keyframes minutes-run {
+    from {
+        -moz-transform: rotate(-90deg);
+    }
+    to {
+        -moz-transform: rotate(270deg);
+    }
+}
+
+hr#hours {
+    width: calc(30% - 10px);
+    /*border: none;*/
+    /*height: 1px;*/
+    border: 2px solid black;
+    border-radius: 2px;
+    position: absolute;
+    /*-webkit-transform: rotate(-90deg);*/
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    top: 50%;
+    z-index: 0;
+    margin: 0;
+    animation: hours-run linear 43200s infinite;
+    -webkit-animation: hours-run linear 43200s infinite;
+    -moz-animation: hours-run linear 43200s infinite;
+    /*box-shadow: 3px 3px 1px #555;*/
+}
+
+@keyframes hours-run {
+    from {
+        transform: rotate(-90deg);
+    }
+    to {
+        transform: rotate(270deg);
+    }
+}
+
+@-webkit-keyframes hours-run {
+    from {
+        -webkit-transform: rotate(-90deg);
+    }
+    to {
+        -webkit-transform: rotate(270deg);
+    }
+}
+
+@-moz-keyframes hours-run {
+    from {
+        -moz-transform: rotate(-90deg);
+    }
+    to {
+        -moz-transform: rotate(270deg);
+    }
+}
+
+.center-point {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0;
+    top: calc(50% - 16px);
+    left: calc(50% - 16px);
+    background-color: lightblue;
+    border: 1px solid #555;
+    position: absolute;
+    z-index: 3;
+    /*box-shadow: 3px 3px 10px #615E7C;*/
+}
+
+article {
+    display: flex;
+    -webkit-justify-content: center;
+    width: 200px;
+    border: 1px solid black;
+    line-height: 40px;
+    border-radius: 5px;
+
+    margin: 0 auto;
+    background: linear-gradient(#6d98ec, lightblue);
+    font-size: 24px;
+    font-family: 'Helvetice Neue', sans-serif;
+}
